@@ -1,10 +1,6 @@
 import { useRef, useState } from "react";
 import "./imageGenerator.css";
 import default_img from "./default.png";
-import dotenv from "dotenv";
-
-
-dotenv.config();
 
 const ImageGenerator = () => {
   const [image_url, setImageUrl] = useState("/");
@@ -21,7 +17,7 @@ const ImageGenerator = () => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${process.env.REACT_APP_OPENAI_API_KEY}`,
+          Authorization: `Bearer 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`,
           "User-Agent": "Chrome",
         },
         body: JSON.stringify({
