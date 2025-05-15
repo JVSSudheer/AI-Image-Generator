@@ -6,6 +6,7 @@ const ImageGenerator = () => {
   const [image_url, setImageUrl] = useState("/");
   let inputRef = useRef(null);
   const [loading, setLoading] = useState(false);
+  const API_KEY=""
   const imageGenerator = async () => {
     if (inputRef.current.value === "") {
       return 0;
@@ -17,7 +18,7 @@ const ImageGenerator = () => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer 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`,
+          Authorization: `Bearer ${API_KEY}`,
           "User-Agent": "Chrome",
         },
         body: JSON.stringify({
